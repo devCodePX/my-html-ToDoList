@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: rgb(105, 129, 235);">
+    
+    <div class="box" style="width: 300px; height: 500px; margin: auto;">
+
+        <form action="">
+            <input type="text" text="hello">
+            <button type="button">Add Task</button>
+            <ol id="tasks"></div>
+        </form>
+    </div>
+
+
+
+    <script>
+
+        let input = document.querySelector("input");
+        let button = document.querySelector("button");
+        let tasksDisplay = document.getElementById("tasks");
+
+        const addTask = () =>{
+
+            let paras = document.createElement("li");
+            paras.innerText  = input.value;
+
+            tasksDisplay.appendChild(paras);
+            
+            input.value ="";
+
+        }
+        button.addEventListener("click",()=>{
+
+            addTask();
+        })
+    </script>
+</body>
+</html>
